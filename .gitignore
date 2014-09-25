@@ -1,0 +1,14 @@
+# common
+*.pyc
+
+# db
+db/*.sqlite3
+
+# env & project
+.venv/
+.env
+*.sublime-*
+
+# static
+static/vendors/
+assets/

@@ -1,0 +1,60 @@
+{
+    "Items": {
+        "fields": {
+            "title": {
+                "type": "CharField",
+                "admin_title": true,
+                "params": {
+                    "blank": true,
+                    "max_length": 255,
+                    "help_text": "Item title"
+                }
+            },
+            "rating": {
+                "type": "IntegerField",
+                "params": {
+                    "blank": true,
+                    "default": 0,
+                    "help_text": "Item rating"
+                }
+            },
+            "date": {
+                "type": "DateField",
+                "params": {
+                    "blank": true,
+                    "null": true,
+                    "help_text": "Available date"
+                }
+            }
+        }
+    },
+    "Storages": {
+        "fields": {
+            "title": {
+                "type": "CharField",
+                "admin_title": true,
+                "params": {
+                    "blank": true,
+                    "max_length": 255,
+                    "help_text": "Storage title"
+                }
+            },
+            "price": {
+                "type": "IntegerField",
+                "params": {
+                    "blank": true,
+                    "default": 0,
+                    "help_text": "Storage price"
+                }
+            },
+            "date": {
+                "type": "DateField",
+                "params": {
+                    "blank": true,
+                    "null": true,
+                    "help_text": "Date available"
+                }
+            }
+        }
+    }
+}

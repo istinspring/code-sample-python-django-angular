@@ -1,0 +1,26 @@
+<!DOCTYPE html>{% load staticfiles %}{% load compressed %}
+<html ng-app="app" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Code sample - django project</title>
+    <base href="/">
+
+    {% compressed_css 'theme' %}
+  </head>
+  <body>
+    <div class="container">
+      {% block header %}
+      {% endblock %}
+
+      <div ng-view class="fadeZoom">
+        {% block partial_templates %}
+        {% endblock %}
+      </div>
+    </div>
+
+    {% compressed_js 'vendors' %}
+    {% compressed_js 'client' %}
+  </body>
+</html>

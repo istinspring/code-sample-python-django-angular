@@ -1,0 +1,24 @@
+{% extends '_layouts/_base.html' %}
+
+{% block partial_templates %}
+  {% for partial_name, partial_html in partials.items %}
+      <script id="{{ partial_name }}" type="text/ng-template">
+        {{ partial_html | safe }}
+      </script>
+  {% endfor %}
+{% endblock %}
+
+{% block header %}
+  <div class="header" ng-controller="HeaderCtrl">
+    <ul class="nav nav-pills pull-right">
+      {% verbatim %}
+      <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+      <li ng-class="{ active: isActive('/about')}"><a href="/about">About</a></li>
+      <li ng-class="{ active: isActive('/contacts')}"><a href="/contacts">Contact</a></li>
+      {% endverbatim %}
+    </ul>
+    <h3 class="text-muted">Code sample - django project</h3>
+  </div>
+  <div class="row" style="padding-top: 20px;"></div>
+{% endblock %}
+
