@@ -1,6 +1,6 @@
 django
 django-configurations
-django-rest-framework
+djangorestframework
 django-suit
 gunicorn
 honcho
